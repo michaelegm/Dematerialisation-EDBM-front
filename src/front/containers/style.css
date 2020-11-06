@@ -1,0 +1,91 @@
+/**** reset du blogue****/
+.unBlog img {
+    padding: 0px;
+}
+/**** reset du blogue****/
+
+
+.acc  {
+	font-family: Arial, Helvetica, sans-serif;
+	border-right:1px solid #CCCCCC;
+}
+
+
+.acc>ul>li>a {
+	-moz-box-shadow:inset 1px 0px 0px 0px #C4E1B0;
+	-webkit-box-shadow:inset 1px 0px 0px 0px #C4E1B0;
+	box-shadow:inset 1px 0px 0px 0px #C4E1B0;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#a3b75f, endColorstr=#74892d);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a3b75f), color-stop(1, #74892d) );
+	background: -moz-linear-gradient( center top, #a3b75f 5%, #74892d 100%);
+	background-color:#a3b75f;
+	border-style:solid;
+	border-color:#56661f;
+	color:#FFFFFF;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:-1px -1px 0px #000000;
+}
+
+.acc>ul>li>a:hover{
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#899a4c', endColorstr='#56661f');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #899a4c), color-stop(1, #56661f) );
+	background:-moz-linear-gradient( center top, #899a4c 5%, #56661f 100% );
+	color:#fff;
+}
+
+.acc>ul>li>div {
+	background-color:#fff;
+	border-style:solid;
+	border-color:#ccc;
+}
+
+.acc>ul>li>div {
+	border-width:1px 0;
+	height:300px;
+	padding:10px;
+	width:430px;
+}
+
+.acc>ul>li>a {
+	border-width:0 1px 0 0;
+	width:40px;
+}
+
+
+
+.acc  {	
+	width:614px;
+}
+
+.acc, .acc>ul>li>a  {	
+	height:322px;
+}
+
+.acc>ul>li {
+	margin-right:-450px; 
+	width:491px;
+	transition: margin-right 0.5s ease-in-out 0.1s;
+    -moz-transition: margin-right 0.5s ease-in-out 0.1s;
+    -webkit-transition: margin-right 0.5s ease-in-out 0.1s;
+    -o-transition: margin-right 0.5s ease-in-out 0.1s;
+}
+
+
+.acc {overflow:hidden;}
+.acc>ul {margin:0;padding:0;list-style:none;width:9999em;}
+.acc>ul>li {float:left;overflow:hidden;}
+.acc>ul>li>a {float:left;margin:0;position:relative;z-index:1;-moz-outline-style:none;outline:none;}
+.acc>ul>li>a>span{ 
+	-moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+	-ms-writing-mode:lr-bt;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	bottom:20px;display:block;position:absolute;width:100%;white-space:nowrap;
+}
+ul.acc-ie>li>a>span {cursor:pointer;width:auto;}
+.acc>ul>li>div {float:left;}
+.acc>ul>li:hover {margin-right:0px;}

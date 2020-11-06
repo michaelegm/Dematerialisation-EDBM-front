@@ -1,0 +1,108 @@
+
+.navbarhome{
+    width: 100%;
+    justify-content: space-between !important;
+    border-bottom:  2px solid #f16e59;
+
+}
+.img-logo-header-home{
+   width: auto;
+    height: 55px;
+}
+.navHeader {
+    justify-content: space-between;
+    flex: 0 0 auto !important;
+    height: 100%;
+}
+.searchHeader {
+    border: 1px solid #cbcbcb;
+    min-width: 230px;
+    border-radius: 30px;
+}
+.searchInput {
+    border: none !important;
+    background-color: transparent !important;
+    border-radius: 35px 0 0 35px ;
+}
+.searchHeader.searchIntern {
+    min-width: 230px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+.searchHeader.searchIntern .searchInput {
+   border-bottom: 1px solid #ddd;
+    font-size: 20px;
+}
+.searchHeader.searchIntern .btn {
+    font-size: 25px;
+}
+#SearchBarBlock  .btn {
+    font-size: 25px;
+    position: relative;
+    color: #000 !important;
+}
+#SearchBarBlock:after {
+    font-size: 25px;
+}
+.searchInt {
+    z-index: 999;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    border-radius: 20px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar-light .navbar-nav .nav-link,
+.navbar-nav .nav-link,
+.linktext{
+    color:#f9f9f9;
+}
+
+  .navbar-light .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover,
+.linktext:hover{
+    color:#059b38  !important;
+    background-color: rgba(255, 255, 255, .9);
+}
+.navbar-light .navbar-nav .nav-link.searchAll,
+.navbar-nav .nav-link:hover.searchAll,
+.linktext.searchAll {
+    font-size: 25px;
+    color: #000;
+}
+#navbarhome .navHeader .nav-item {
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+#navbarhome .navHeader .nav-item:hover {
+    background-color: #ffffff;
+}
+#navbarhome .navHeader .nav-item:hover a,
+#navbarhome .navHeader .nav-item:hover button,
+#navbarhome .navHeader .nav-item:hover button:after {
+    color: #059b38  ;
+}
+#navbarhome .navHeader .nav-item:hover .dropdown-menu,
+#navbarhome .navHeader .nav-item:hover .dropdown-menu a {
+    color: #000  ;
+}
+
+#navbarhome .navHeader .nav-item:hover .dropdown-menu a:hover {
+    color: #689aca  ;
+}
+.menuLinks {
+    color: #000;
+    text-transform: uppercase;
+
+}

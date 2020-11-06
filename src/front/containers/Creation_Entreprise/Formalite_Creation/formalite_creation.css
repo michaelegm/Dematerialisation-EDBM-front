@@ -1,0 +1,24 @@
+.h3{
+    color: #0077c2;
+    font-size: 43px;
+    font-family: 'Aeonik-Light', Arial, sans-serif;
+}
+.caract{
+    background-color: white;
+}
+.example{
+    background: #405a9f;
+    color: white;
+    line-height: 1;
+    height: 200px;
+    vertical-align: middle;
+    padding-left: 3%;
+    margin-top: 0.5%;
+}
+.center_content{
+    align-content: center;
+}
+.document_list{
+    width: 1500px;
+    padding-left: 150px;
+}

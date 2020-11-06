@@ -1,0 +1,85 @@
+.titre{
+    font-size: 40px;
+    text-align: center;
+    color: #0077c2;
+
+    font-family: 'Aeonik-Bold', sans-serif;
+    line-height: 0.57;
+    margin-bottom: 20px;
+}
+.nomac-container{
+    background-color: #0077c2!important;
+    border-radius: 20px;
+    box-shadow:0 0 20px #0000001a;
+    overflow: hidden;
+}
+.detreminer p{
+    background: #405a9f;
+    padding: 30px 20px 20px 20px;
+    text-align: justify;
+    color: #fff;
+    font-family: 'Aeonik-Light', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.droite-detail h4{
+    font-family: 'Aeonik-Regular', sans-serif;
+    color:  #0077c2;
+    font-size: 22px;
+}
+.nomac-list-droite{
+    background: url('../../../images/bg_potentiel.png') no-repeat 0 0;
+}
+
+.arbre-rubriques li{
+    font-family: 'Aeonik-Medium', sans-serif;
+    line-height: 1.5;
+    color: #000;
+    font-size: 18px;
+    list-style-image: url('../../../images/puce_liste.png');
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 11px 0;
+}
+.arbre-rubriques li::before {
+    content: '';
+    /*position: absolute;*/
+    /*top: 5px;*/
+    /*left: 0;*/
+    height: 16px;
+    width: 40px;
+    min-width: 40px;
+    flex-basis: 40px;
+    background: url('../../../images/puce_liste.png') no-repeat 0 0;
+    background-size: 16px 16px;
+    margin-top: 10px;
+}
+.arbre-rubriques b {
+    background: #01af651c;
+    display: block;
+    padding: 30px;
+    margin: -20px -20px 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.arbre-rubriques b:after {
+}
+.arbre-rubriques i{
+    font-family: 'Aeonik-Medium', sans-serif;
+    line-height: 1.5;
+    color: #0077c2;
+    font-size: 22px;
+}
+.arbre-rubriques span {
+    cursor: pointer;
+}
+ .textfinal{
+    font-family: 'Aeonik-Regular', sans-serif;
+    line-height: 1.5;
+    color:black;
+    font-size: 18px;
+}

@@ -1,0 +1,4 @@
+
+export const LISTE_SUJET="LISTE_SUJET"
+export const LISTE_THEME="LISTE_THEME"
+export const LISTE_QUESTION="LISTE_QUESTION"

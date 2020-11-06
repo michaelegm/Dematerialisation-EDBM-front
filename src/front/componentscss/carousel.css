@@ -1,0 +1,77 @@
+.homeSlide {
+    background-color: #e3e8fd;
+    margin-top: -45px;
+}
+.homeSlide .carousel-item {
+    min-height: 300px;
+    max-height: 640px;
+}
+.homeSlide .carousel-item.active {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.homeSlide .carousel-item:after {
+    content: '';
+    display: block;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    position: absolute;
+    z-index: 0;
+    background: rgba(0, 0, 0, .7);
+}
+
+.homeSlide .carousel-caption  {
+    text-align: center;
+    /*position: static !important;*/
+    padding: 180px  50px ;
+    }
+
+.homeSlide .carousel-caption  h3{
+    font-size: 56px;
+    color: white;
+    font-weight:600 ;
+    font-family: 'Aeonik-Bold', sans-serif;
+}
+.homeSlide .carousel-caption p {
+    margin: 10px;
+    color:  white;
+    font-weight:300 ;
+    font-family: 'Aeonik-Regular', sans-serif;
+    font-size: 22px;
+    
+}
+.homeSlide .carousel-caption .btn {
+    color:  #FFFFFF;
+    text-transform: uppercase;
+    border-color:  #FFFFFF;
+    background-color: rgba(255, 255, 255, .1);
+    padding: 15px 55px;
+    border-radius: 50px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: 'Aeonik-Lightr', Arial, sans-serif;
+    transition: all .3s ease-in;
+}
+.homeSlide .carousel-caption .btn:hover {
+    color:  #059b38;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.homeSlide .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    background-color: #cbcbcb;
+    border-radius: 5px;
+    border:1px solid  #cbcbcb !important;
+    margin: 10px;
+}
+.homeSlide .carousel-indicators li.active {
+    background-color: #fff;
+    border:1px solid  #cbcbcb !important;
+    border-radius: 5px;
+}
+

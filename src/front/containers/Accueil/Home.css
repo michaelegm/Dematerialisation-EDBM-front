@@ -1,0 +1,184 @@
+
+/*=================================*/
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background:linear-gradient(111deg, #00b164 , #405a9f 100%);
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 10px solid #ffffff;
+  margin-bottom: 35px;
+}
+.App-header:after {
+  content: '';
+  display: none;
+  position: absolute;
+  bottom: -35px;
+  margin: 0 auto;
+  height: 50px;
+  left: calc(100%/ 2 - 1680px / 2);
+  right: calc(100%/ 2 - 1680px / 2);
+  background: #fff;
+  border-radius: 50% 50% 0% 0%;
+}
+.App-header .dropdown-menu {
+   background-color: #f2f4f9 ;
+}
+.homepage .App-header:after {
+  display:none;
+}
+.notConnecteButtons a,
+.notConnecteButtons .linktext {
+  border: 1px solid #fff;
+  border-radius: 30px;
+  margin: 0 5px;
+  font-size: 14px;
+  padding:5px 20px !important
+}
+
+.App-link {
+  color: #61dafb;
+}
+.paragraphe-information{
+  font-family: 'Aeonik-Regular', sans-serif;
+  color: #000;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.paragraphe-titre{
+  margin-top: 4em;
+  font-size: calc(16px + 2vmin);
+
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.infoHome {
+  border-radius: 36px 36px 36px 36px !important;
+  box-shadow: 0 0 2px rgba(5, 133, 192, 0.2) !important;
+  border: none !important;
+  padding: 60px 15px;
+  background-color: #689aca!important;
+ /* background-color: #0077c2!important;*/
+ /* background-color: #00796b!important;*/
+ /*background-color: #00796b !important;*/
+  transition: all .3s ease-in;
+  /*background-image:linear-gradient(0, #fff 60%, #689aca 250%)*/
+  /*position: relative;*/
+}
+.infoHome:hover {
+  transform: scale(100%);
+  box-shadow: 0 0 10px  rgba(5, 133, 192, 0.2) !important;
+  background-color:#4caf50!important;
+  text-decoration: none !important;
+}
+a:hover .infoHome   {
+  text-decoration: none !important;
+}
+.infoHome .card-body {
+  padding: 55px 0 0 !important;
+}
+.infoHome h5 {
+  color: white ;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+.infoHome .AppImg  {
+  background-color: transparent;
+  border: none;
+  width:'60px';
+  height:'50px';
+  
+  /*  border-radius: 20px !important;*/
+/*  position: absolute;*/
+/*  padding: 20px !important;*/
+/*  top: -30px;*/
+/*  left: 25px;*/
+}
+/*.infoHome.appHead1  {*/
+/*  border-top: 5px solid #689aca !important;*/
+/*}*/
+/*.infoHome.appHead2   {*/
+/*  border-top: 5px solid #de0a23 !important;*/
+/*}*/
+/*.infoHome.appHead3  {*/
+/*  border-top: 5px solid  #059b38 !important;*/
+/*}*/
+/*.infoHome.appHead1  .AppImg {*/
+/*  background-color: #689aca ;*/
+/*}*/
+/*.infoHome.appHead2 .AppImg  {*/
+/*  background-color: #de0a23;*/
+/*}*/
+/*.infoHome.appHead3 .AppImg  {*/
+/*  background-color: #059b38 ;*/
+/*}*/
+
+.ContentHome {
+  /*border-bottom: 1px solid #F2F2F2;*/
+  padding-bottom: 10px;
+  margin-left: 20px!important;
+  margin-right: 20px!important;
+}
+.blockHome {
+  margin: 0 15px 15px !important;
+  line-height: 1.78;
+    margin-bottom: 10px;
+    font-family: 'Aeonik-Regular', sans-serif;
+    color: #000;
+    font-size: 18px;
+}
+.texteHome {
+
+  padding: 3rem  3rem 3rem;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+}
+.img-fluid{
+  border-radius: 32px 32px 32px 32px;
+  box-shadow: 0 8px 0 0 #f2f3f7;
+}
+.centraliser{
+  font-family: 'Aeonik-Bold', sans-serif;
+  font-size: 44px;
+  font-weight: 100;
+  line-height: 1.33;
+  color: #0b2817;
+  padding: 0;
+  margin-bottom: 32px;
+}
+h5 .text_btn:hover{
+text-decoration: none;
+}
+.text_btn{
+  text-decoration: none;
+}
+.faq_text{
+  font-family: 'Aeonik-Light', sans-serif;
+  font-size: 20px;
+  line-height: 1.50;
+  color:#405a9f;
+}

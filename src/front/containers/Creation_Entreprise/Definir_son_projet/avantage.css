@@ -1,0 +1,17 @@
+.soc_fait{
+    list-style-image: url('../../../../images/minus-sign.png');
+    padding-left: 3px;
+    margin-left: 10px;
+    font-family: 'Aeonik-Regular', sans-serif;
+    line-height: 1.5;
+    color: #000;
+}
+.soc_formalise{
+    list-style-image: url('../../../../images/plus\(1\).png');
+    padding-left: 3px;
+    margin-left: 10px;
+    font-family: 'Aeonik-Regular', sans-serif;
+    line-height: 1.5;
+    color: #000;
+  
+}

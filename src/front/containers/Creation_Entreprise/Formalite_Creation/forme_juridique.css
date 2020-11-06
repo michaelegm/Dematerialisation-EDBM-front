@@ -1,0 +1,11 @@
+strong{
+    font-weight: bolder;
+}
+.cardStyle1{
+    font-family: 'Aeonik-Light', sans-serif;
+    font-size: 18px;
+    line-height: 1.78;
+    color:gray;
+    margin-bottom: 40px;
+    
+}

@@ -1,0 +1,11 @@
+.texte p{
+    line-height: 1.78;
+    margin-bottom: 10px;
+    font-family: 'Aeonik-Regular', sans-serif;
+    color: #000;
+    font-size: 18px;
+
+}
+#card{
+    border-radius: 36px 36px 36px 36px !important;
+}

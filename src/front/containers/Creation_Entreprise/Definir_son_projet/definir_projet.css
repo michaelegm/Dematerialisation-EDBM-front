@@ -1,0 +1,23 @@
+.notion{
+    background: url('../../../../images/bg_potentiel.png')no-repeat 0 0;
+    width:100%;
+    min-height: 608px;
+    background-size: cover;
+    position: relative;
+}
+.notion:after{
+    background: url('../../../../images/fill_infrastructure.png') no-repeat 0 0;
+    width: 100%;
+    height: 32px;
+    background-size: cover;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: -32px;
+}
+.centraliser{
+    font-family: 'Aeonik-Light', sans-serif;
+    font-size: 56px;
+    color: #000;
+  
+    }

@@ -1,0 +1,18 @@
+.h3{
+    color: #0077c2;
+    font-size: 43px;
+    font-family: 'Aeonik-Light', Arial, sans-serif;
+}
+.caract{
+    background-color: white;
+}
+.example{
+    background: #405a9f;
+    color: white;
+    line-height: 1;
+    height: 200px;
+    vertical-align: middle;
+}
+.center_content{
+    align-content: center;
+}

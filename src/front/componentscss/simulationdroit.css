@@ -1,0 +1,39 @@
+.nomac-list-gauche{
+    box-sizing: border-box;
+    width: 60%;
+    flex-basis: 60%;
+    border-right: solid #3467ae 1px;
+    padding: 20px;
+    background-color: #fff;
+}
+.nomac-list-droite{
+    width: 40%;
+    flex-basis: 40%;
+    border-left: solid #3467ae 1px;
+    margin-left: -1px;
+    align-content: left;
+    padding: 20px;
+}
+.Dossier .nomac-container{
+    background-color: #f3f3f3 !important;
+    border: solid #e0e0e0 1px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.droite-detail{
+    align-content:justify;
+}
+.arbre-rubriques {
+    background-color: #ffffff;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    align-content: left;
+
+}
+.chiffre {
+    text-align: right;
+}
+.montant{
+    
+}

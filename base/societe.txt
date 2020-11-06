@@ -1,0 +1,294 @@
+CREATE TABLE "societe" (
+	"idSociete" integer NOT NULL,
+	"denominationSocial" varchar(50) NOT NULL,
+	"bic" varchar(25) NOT NULL,
+	"duree" integer NOT NULL,
+	"nomCommercial" varchar(50) NOT NULL,
+	"activitePrincipal" integer NOT NULL,
+	"formeJuridique" varchar(150) NOT NULL,
+	"dateStatut" DATE NOT NULL,
+	"capital" FLOAT NOT NULL,
+	"declarationActivite" TEXT NOT NULL,
+	"regimeFiscal" integer NOT NULL,
+	"importateur" integer,
+	"exportateur" integer,
+	"totalPart" integer,
+	"idDossier" integer NOT NULL,
+	"idMandataire" integer NOT NULL,
+	"idInterlocuteur" integer NOT NULL,
+	"NIF" varchar(30) NOT NULL,
+	"STAT" varchar(30) NOT NULL,
+	"RCS" varchar(30) NOT NULL,
+	"activiteSecondaire" varchar(250) NOT NULL,
+	CONSTRAINT "societe_pk" PRIMARY KEY ("idSociete")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "secteurActivite" (
+	"codeSecteurActivite" varchar(10) NOT NULL,
+	"libelleSecteurActivite" VARCHAR(50) NOT NULL,
+	CONSTRAINT "secteurActivite_pk" PRIMARY KEY ("codeSecteurActivite")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "activiteDetail" (
+	"idactiviteDetail" integer NOT NULL,
+	"idGroupeActivite" varchar(25) NOT NULL,
+	"libelleActiviteDetail" varchar(255) NOT NULL,
+	CONSTRAINT "activiteDetail_pk" PRIMARY KEY ("idactiviteDetail")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "formeJuridique" (
+	"codeFormeJuridique" varchar(8) NOT NULL,
+	"libelleFormeJuridique" varchar(150) NOT NULL,
+	"caracteristique" TEXT NOT NULL,
+	"casUtilisation" varchar(300) NOT NULL,
+	"responsabilite" varchar(200) NOT NULL,
+	CONSTRAINT "formeJuridique_pk" PRIMARY KEY ("codeFormeJuridique")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "fonction" (
+	"idFonction" serial NOT NULL,
+	"nomFonction" varchar(50) NOT NULL,
+	CONSTRAINT "fonction_pk" PRIMARY KEY ("idFonction")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "sectionActivite" (
+	"idSectionActivite" varchar(25) NOT NULL,
+	"libelleSectionActivite" varchar(300) NOT NULL,
+	"codeSecteurActivite" varchar(10) NOT NULL,
+	CONSTRAINT "sectionActivite_pk" PRIMARY KEY ("idSectionActivite")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "divisionActivite" (
+	"idDivisionActivite" varchar(25) NOT NULL,
+	"libelleDivisionActivite" varchar(300) NOT NULL,
+	"codeSectionActivite" varchar(25) NOT NULL,
+	CONSTRAINT "divisionActivite_pk" PRIMARY KEY ("idDivisionActivite")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "groupeActivite" (
+	"idGroupeActivite" varchar(25) NOT NULL,
+	"libelleGroupeActivite" varchar(300) NOT NULL,
+	"idDivisionActivite" varchar(25) NOT NULL,
+	CONSTRAINT "groupeActivite_pk" PRIMARY KEY ("idGroupeActivite")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "regimeFiscal" (
+	"idRegime" serial NOT NULL,
+	"libelleRegimeFiscal" varchar(50) NOT NULL,
+	"acroRegimeFiscal" varchar(10) NOT NULL,
+	CONSTRAINT "regimeFiscal_pk" PRIMARY KEY ("idRegime")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "siegeSocial" (
+	"idSiege" integer NOT NULL,
+	"idConditionSiege" integer NOT NULL,
+	"dureebail" integer NOT NULL,
+	"montantBail" FLOAT NOT NULL,
+	"bailleur" integer NOT NULL,
+	"adresseSiegeSocial" integer NOT NULL,
+	CONSTRAINT "siegeSocial_pk" PRIMARY KEY ("idSiege")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "conditionSiegeSociale" (
+	"idConditionSiege" serial NOT NULL,
+	"libelleConditionSiege" varchar(30) NOT NULL,
+	CONSTRAINT "conditionSiegeSociale_pk" PRIMARY KEY ("idConditionSiege")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "bailleur" (
+	"idBailleur" serial NOT NULL,
+	"nomBailleur" varchar(50) NOT NULL,
+	"CIN" integer,
+	"NIF" integer,
+	"adresseBailleur" integer NOT NULL,
+	"tel" integer NOT NULL,
+	"societe" BOOLEAN NOT NULL,
+	"particulier" BOOLEAN NOT NULL,
+	CONSTRAINT "bailleur_pk" PRIMARY KEY ("idBailleur")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "lieuExploitation" (
+	"idLieuExploitation" serial NOT NULL,
+	"bailleur" integer NOT NULL,
+	"idSiegeSocial" integer NOT NULL,
+	"adresseLieuExploitation" integer NOT NULL,
+	CONSTRAINT "lieuExploitation_pk" PRIMARY KEY ("idLieuExploitation")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "associe" (
+	"idAssocie" serial NOT NULL,
+	"nomAssocie" varchar(30) NOT NULL,
+	"prenomAssocie" varchar(50) NOT NULL,
+	"partCapitalAssocie" FLOAT NOT NULL,
+	"idPays" varchar(30) NOT NULL,
+	"adresseAssocie" integer NOT NULL,
+	"idPersonne" integer NOT NULL,
+	CONSTRAINT "associe_pk" PRIMARY KEY ("idAssocie")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "adresse" (
+	"idAdresse" serial NOT NULL,
+	"idFokotany" varchar(25) NOT NULL,
+	"idCommune" varchar(25) NOT NULL,
+	"idDistrict" varchar(25) NOT NULL,
+	"idProvince" varchar(25) NOT NULL,
+	"idRegion" varchar(25) NOT NULL,
+	CONSTRAINT "adresse_pk" PRIMARY KEY ("idAdresse")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "dirigeant" (
+	"idDirigeant" serial NOT NULL,
+	"dureMandat" integer NOT NULL,
+	"idPersonne" integer NOT NULL,
+	"adresseDirigeant" integer NOT NULL,
+	"fonctionDirigeant" integer NOT NULL,
+	CONSTRAINT "dirigeant_pk" PRIMARY KEY ("idDirigeant")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "societeDirigeant" (
+	"idSociete" integer NOT NULL,
+	"iDirigeant" integer NOT NULL,
+	CONSTRAINT "societeDirigeant_pk" PRIMARY KEY ("idSociete","iDirigeant")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "societeAssocie" (
+	"idSociete" integer NOT NULL,
+	"idAssocie" integer NOT NULL,
+	CONSTRAINT "societeAssocie_pk" PRIMARY KEY ("idSociete","idAssocie")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "apport" (
+	"idApport" serial NOT NULL,
+	"nomApport" varchar(25) NOT NULL,
+	CONSTRAINT "apport_pk" PRIMARY KEY ("idApport")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "valeurApport" (
+	"idValeurApport" serial NOT NULL,
+	"idApport" integer NOT NULL,
+	"valeur" FLOAT NOT NULL,
+	CONSTRAINT "valeurApport_pk" PRIMARY KEY ("idValeurApport")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+ALTER TABLE "societe" ADD CONSTRAINT "societe_fk0" FOREIGN KEY ("activitePrincipal") REFERENCES "activiteDetail"("idactiviteDetail");
+ALTER TABLE "societe" ADD CONSTRAINT "societe_fk1" FOREIGN KEY ("formeJuridique") REFERENCES "formeJuridique"("codeFormeJuridique");
+ALTER TABLE "societe" ADD CONSTRAINT "societe_fk2" FOREIGN KEY ("regimeFiscal") REFERENCES "regimeFiscal"("idRegime");
+
+
+ALTER TABLE "activiteDetail" ADD CONSTRAINT "activiteDetail_fk0" FOREIGN KEY ("idGroupeActivite") REFERENCES "groupeActivite"("idGroupeActivite");
+
+
+
+ALTER TABLE "sectionActivite" ADD CONSTRAINT "sectionActivite_fk0" FOREIGN KEY ("codeSecteurActivite") REFERENCES "secteurActivite"("codeSecteurActivite");
+
+ALTER TABLE "divisionActivite" ADD CONSTRAINT "divisionActivite_fk0" FOREIGN KEY ("codeSectionActivite") REFERENCES "sectionActivite"("idSectionActivite");
+
+ALTER TABLE "groupeActivite" ADD CONSTRAINT "groupeActivite_fk0" FOREIGN KEY ("idDivisionActivite") REFERENCES "divisionActivite"("idDivisionActivite");
+
+
+ALTER TABLE "siegeSocial" ADD CONSTRAINT "siegeSocial_fk0" FOREIGN KEY ("idConditionSiege") REFERENCES "conditionSiegeSociale"("idConditionSiege");
+ALTER TABLE "siegeSocial" ADD CONSTRAINT "siegeSocial_fk1" FOREIGN KEY ("bailleur") REFERENCES "bailleur"("idBailleur");
+ALTER TABLE "siegeSocial" ADD CONSTRAINT "siegeSocial_fk2" FOREIGN KEY ("adresseSiegeSocial") REFERENCES "adresse"("idAdresse");
+
+
+ALTER TABLE "bailleur" ADD CONSTRAINT "bailleur_fk0" FOREIGN KEY ("adresseBailleur") REFERENCES "adresse"("idAdresse");
+
+ALTER TABLE "lieuExploitation" ADD CONSTRAINT "lieuExploitation_fk0" FOREIGN KEY ("bailleur") REFERENCES "bailleur"("idBailleur");
+ALTER TABLE "lieuExploitation" ADD CONSTRAINT "lieuExploitation_fk1" FOREIGN KEY ("idSiegeSocial") REFERENCES "siegeSocial"("idSiege");
+ALTER TABLE "lieuExploitation" ADD CONSTRAINT "lieuExploitation_fk2" FOREIGN KEY ("adresseLieuExploitation") REFERENCES "adresse"("idAdresse");
+
+ALTER TABLE "associe" ADD CONSTRAINT "associe_fk0" FOREIGN KEY ("adresseAssocie") REFERENCES "adresse"("idAdresse");
+
+
+ALTER TABLE "dirigeant" ADD CONSTRAINT "dirigeant_fk0" FOREIGN KEY ("adresseDirigeant") REFERENCES "adresse"("idAdresse");
+ALTER TABLE "dirigeant" ADD CONSTRAINT "dirigeant_fk1" FOREIGN KEY ("fonctionDirigeant") REFERENCES "fonction"("idFonction");
+
+ALTER TABLE "societeDirigeant" ADD CONSTRAINT "societeDirigeant_fk0" FOREIGN KEY ("idSociete") REFERENCES "societe"("idSociete");
+ALTER TABLE "societeDirigeant" ADD CONSTRAINT "societeDirigeant_fk1" FOREIGN KEY ("iDirigeant") REFERENCES "dirigeant"("idDirigeant");
+
+ALTER TABLE "societeAssocie" ADD CONSTRAINT "societeAssocie_fk0" FOREIGN KEY ("idSociete") REFERENCES "societe"("idSociete");
+ALTER TABLE "societeAssocie" ADD CONSTRAINT "societeAssocie_fk1" FOREIGN KEY ("idAssocie") REFERENCES "associe"("idAssocie");
+
+
+ALTER TABLE "valeurApport" ADD CONSTRAINT "valeurApport_fk0" FOREIGN KEY ("idApport") REFERENCES "apport"("idApport");
+
